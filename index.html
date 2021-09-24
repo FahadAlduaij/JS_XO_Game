@@ -8,10 +8,18 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
 
-    <title>Document</title>
+    <title>Tic Tac Toe</title>
 </head>
 <body>
+    <div class="Header">
+        <h1 class="Heading">Tic Tac Toe</h1>
+    </div>
     <div class="container" id="container">
+        
+        <div class="win" id="winID" >
+            <div id="winningMsg" class="winningMsg"></div>
+            
+        </div>
         <div class="row">
             <button  id="1" class="xobutton" onclick="clickButton(1)"></button>
             <button id="2" class="xobutton" onclick="clickButton(2)"></button>
@@ -26,6 +34,9 @@
             <button id="7" class="xobutton" onclick="clickButton(7)"></button>
             <button id="8" class="xobutton" onclick="clickButton(8)"></button>
             <button id="9" class="xobutton" onclick="clickButton(9)"></button>
+        </div>
+        <div class="restartdiv">
+        <button id="restartButton" class="restart" onclick="restartGame()">Restart</button>
         </div>
     </div>
 <!-- <script src="engine.js"></script>
