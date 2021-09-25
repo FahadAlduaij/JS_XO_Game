@@ -5,7 +5,6 @@ function fillButton(index, text) {
 	document.getElementById(index).innerHTML = text;
 }
 
-
 const firstplayer = "X";
 const secondplayer = "O";
 let player = 1;
@@ -20,9 +19,9 @@ const roles = [
 	[0, 4, 8],
 	[2, 4, 6],
 ];
-let role = roles.forEach(function(element) {
-  element
-  })
+let role = roles.forEach(function (element) {
+	element;
+});
 
 /*
  * This function gets executed every time the user clicks the button
@@ -59,15 +58,15 @@ function checkPlayer(index) {
 		player = 1;
 	}
 }
-
+// testing stash
 /*
  * checkWinner a function that checks
  * who is winning and returns the winner
  */
 function checkWinner(index) {
-  if (index === role) {
-    winningAlert(firstplayer);
-  }
+	if (index === role) {
+		winningAlert(firstplayer);
+	}
 
 	// if (
 	// 	document.getElementById(1).innerHTML === firstplayer &&
