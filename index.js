@@ -1,5 +1,11 @@
-// Premade function that will fill the button with its number.
-// First button top left is called 1, last button bottom right is 9
+const firstPlayer = "X";
+const secondPlayer = "O";
+let player = 1;
+let win = false;
+let game = [
+	[1, 2, 3],
+	[4, 5, 6],
+];
 
 /**
  * THE MAIN FUNUCTION
@@ -8,14 +14,14 @@
  * That interacts with the UI
  */
 
-const firstPlayer = "X";
-const secondPlayer = "O";
-let player = 1;
-let win = false;
-
-// This function fills
-function fillButton(index, text) {
-	document.getElementById(index).innerHTML = text;
+function clickButton(index) {
+	if (win) {
+		return;
+	}
+	if (document.getElementById(index).innerHTML.length === 0) {
+		return checkWinner(checkPlayer(index));
+	} else {
+	}
 }
 
 // in this function you should check if the player is X or O
@@ -30,16 +36,9 @@ function checkPlayer(index) {
 	}
 }
 
-// This clickButton Function that click the X or O buttons
-function clickButton(index) {
-  if (win) {
-    return
-  }
-	if (document.getElementById(index).innerHTML.length === 0) {
-		return checkWinner(checkPlayer(index));
-	} 
-  else {
-	}
+// This function fills
+function fillButton(index, text) {
+	document.getElementById(index).innerHTML = text;
 }
 
 // checkWinner should be a function that checks
@@ -146,13 +145,13 @@ function checkWinner(index) {
 
 // function restart game
 function restartGame() {
-  	win = false;
+	win = false;
 	location.reload();
 }
 
 // premade a function. You can use this function to present an alert to say somene wins
 function winningAlert(winner) {
-  	win = true;
+	win = true;
 	document.getElementById("winID").style.display = "flex";
 	document.getElementById(
 		"winningMsg"
