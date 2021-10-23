@@ -80,6 +80,36 @@ function checkWinner(index) {
 		o.join("") === roles[2].join("")
 	) {
 		return winningAlert(index);
+	} else if (
+		x.join("") === roles[3].join("") ||
+		o.join("") === roles[3].join("")
+	) {
+		return winningAlert(index);
+	} else if (
+		x.join("") === roles[4].join("") ||
+		o.join("") === roles[4].join("")
+	) {
+		return winningAlert(index);
+	} else if (
+		x.join("") === roles[5].join("") ||
+		o.join("") === roles[5].join("")
+	) {
+		return winningAlert(index);
+	} else if (
+		x.join("") === roles[6].join("") ||
+		o.join("") === roles[6].join("")
+	) {
+		return winningAlert(index);
+	} else if (
+		x.join("") === roles[7].join("") ||
+		o.join("") === roles[7].join("")
+	) {
+		return winningAlert(index);
+	} else if (
+		x.join("") === roles[8].join("") ||
+		o.join("") === roles[8].join("")
+	) {
+		return winningAlert(index);
 	}
 }
 
