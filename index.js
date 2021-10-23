@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // Premade function that will fill the button with its number.
 // First button top left is called 1, last button bottom right is 9
 
@@ -36,19 +35,6 @@ const roles = [
 // ];
 
 /*
-=======
-const firstPlayer = "X";
-const secondPlayer = "O";
-let player = 1;
-let win = false;
-let game = [
-	[1, 2, 3],
-	[4, 5, 6],
-];
-
-/**
- * THE MAIN FUNUCTION
->>>>>>> 4bc9a72221f69004ab0893b94108d22b240b1095
  * This function gets executed every time the user clicks the button
  * That interacts with the UI
  */
