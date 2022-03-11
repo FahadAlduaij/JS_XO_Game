@@ -1,16 +1,10 @@
-// Premade function that will fill the button with its number.
-// First button top left is called 1, last button bottom right is 9
-
-// This function fills
-function fillButton(index, text) {
-	document.getElementById(index).innerHTML = text;
-}
-
+let gameStarted = false;
+let gameStatus = false;
 const firstPlayer = "X";
 const secondPlayer = "O";
+let player = 1;
 let x = [];
 let o = [];
-let player = 1;
 let win = false;
 const roles = [
 	[1, 2, 3],
@@ -34,13 +28,28 @@ const roles = [
 // 	[2, 4, 6],
 // ];
 
+// This function Change the button text
+function startGame() {
+	if (!gameStarted) {
+		document.getElementById("restartButton").innerHTML = "Restart";
+		gameStarted = true;
+	} else {
+		document.getElementById("restartButton").innerHTML = "Restart";
+		restartGame();
+	}
+}
+
+// This function fills
+function fillButton(index, text) {
+	document.getElementById(index).innerHTML = text;
+}
+
 /*
  * This function gets executed every time the user clicks the button
  * That interacts with the UI
  */
-
 function clickButton(index) {
-	if (win) {
+	if (win || !gameStarted) {
 		return;
 	}
 	if (document.getElementById(index).innerHTML.length === 0) {
@@ -62,7 +71,7 @@ function checkPlayer(index) {
 		o.push(index);
 	}
 }
-// testing stash
+
 /*
  * checkWinner a function that checks
  * who is winning and returns the winner
